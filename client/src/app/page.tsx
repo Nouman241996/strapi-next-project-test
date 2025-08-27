@@ -1,24 +1,21 @@
+import { HeroSection } from "@/components/blocks/hero-section";
+import { getHomePage } from "@/data/loader";
+import { notFound } from "next/navigation";
+import { InfoBlock } from "@/components/blocks/info-block";
+import { BlockRenderer } from "@/components/blogRenderer";
 
 async function Loader() {
-  const path="/api/home-page?populate=*";
-  const BASE_URL = "http://localhost:1337";
-  const url = new URL(path, BASE_URL);
-  
-  const res = await fetch(url.href);
-  const data = await res.json();
+  const data = await getHomePage();
+  if (!data) {
+    notFound();
+  }
   console.log(data);
-  return { ...data.data};
- }
+  return {...data.data};
+}
 
 export default async function HomeRoute() {
   const data = await Loader();
+  const blocks = data?.blocks || [];
   console.log(data);
-  return (
-   <div> 
-    <h1>{data.title}</h1>
-    <p>{data.description}</p>
-    <p>{data.email}</p>
-    <img src={"http://localhost:8080" + data.img_url.url} alt="Image" />
-  </div>
-  );
+  return <BlockRenderer blocks={blocks} />;
 }

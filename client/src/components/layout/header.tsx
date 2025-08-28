@@ -5,6 +5,7 @@ import { StrapiImage } from "../strapi-image";
 import type { LogoProps, LinkProps } from "@/types";    
 
 
+
 interface HeaderProps {
   data: {
     logo: LogoProps;

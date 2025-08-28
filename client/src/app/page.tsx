@@ -3,6 +3,7 @@ import { getHomePage } from "@/data/loader";
 import { notFound } from "next/navigation";
 import { InfoBlock } from "@/components/blocks/info-block";
 import { BlockRenderer } from "@/components/blogRenderer";
+import "../sass/main.scss";
 
 async function Loader() {
   const data = await getHomePage();

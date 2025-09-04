@@ -79,6 +79,17 @@ const pageBySlugQuery = (slug: string) => qs.stringify(
               cta: true,
             },
           },
+          "blocks.featured-article": {
+            populate: {
+              image: {
+                fields: ["url", "alternativeText"],
+              },
+              link: true,
+            },
+          },
+          "blocks.subscribe": {
+            populate: true,
+          },
         },
       },
     },
@@ -100,9 +111,7 @@ const globalSettingQuery = qs.stringify(
       Header: {
         populate: {
           logo: {
-            // fields directly on `logo`
             fields: ["logoText"],
-            // if `logo.image` exists, include only what you need
             populate: {
               image: {
                 fields: ["url", "alternativeText"],
@@ -117,12 +126,26 @@ const globalSettingQuery = qs.stringify(
           },
         },
       },
+      footer: {
+        populate: {
+          logo: {
+            populate: {
+              image: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+          navigation: true,
+          policies: true,
+        },
+      },
     },
     // optionally include top-level fields from Global
     // fields: ["title", "description"],
   },
   { encodeValuesOnly: true }
 );
+
 export async function getGlobalSettings() {
   const path = "/api/global";
   const BASE_URL = getStrapiURL();

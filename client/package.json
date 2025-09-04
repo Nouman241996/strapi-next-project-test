@@ -22,7 +22,8 @@
     "react-markdown": "^10.1.0",
     "sass": "^1.91.0",
     "shadcn": "^2.10.0",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "yod": "^1.0.0-alpha.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

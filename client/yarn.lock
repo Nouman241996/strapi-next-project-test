@@ -3181,6 +3181,11 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+jsonfy@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/jsonfy/-/jsonfy-0.1.0.tgz#bb50a57cd2077ad8953e3fd291bd7cf2374782cd"
+  integrity sha512-Xw4o10mEUftnLkpAvLMCZAv7sWtJIkqGzAYkuqEGx8l0KcQbbg6V6OYfUrZcXrRMTRt2xXcwNZC/1R1bInGs6w==
+
 "jsx-ast-utils@^2.4.1 || ^3.0.0", jsx-ast-utils@^3.3.5:
   version "3.3.5"
   resolved "https://registry.npmjs.org/jsx-ast-utils/-/jsx-ast-utils-3.3.5.tgz"
@@ -3312,6 +3317,11 @@ lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
+lodash@^3.7.0:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+  integrity sha512-9mDDwqVIma6OZX79ZlDACZl8sBm0TEnkf99zV3iMA4GzkIT/9hiqP5mY0HoT1iNLCrKc/R1HByV+yJfRWVJryQ==
 
 log-symbols@^5.1.0:
   version "5.1.0"
@@ -4655,6 +4665,11 @@ space-separated-tokens@^2.0.0:
   resolved "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz"
   integrity sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==
 
+sscan@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/sscan/-/sscan-0.2.0.tgz#a70911f69849e1255612f072f773471fa44a7acf"
+  integrity sha512-zg2cRUUmEbRiRSJFMmVFDrRwyEDEYmK071TUkHWCOltA4ruyvpVSm1WmoUQ90nzLxEFbE4L9Km7qWGCWyY7mOQ==
+
 stable-hash@^0.0.5:
   version "0.0.5"
   resolved "https://registry.npmjs.org/stable-hash/-/stable-hash-0.0.5.tgz"
@@ -5332,6 +5347,15 @@ yoctocolors-cjs@^2.1.2:
   version "2.1.3"
   resolved "https://registry.npmjs.org/yoctocolors-cjs/-/yoctocolors-cjs-2.1.3.tgz"
   integrity sha512-U/PBtDf35ff0D8X8D0jfdzHYEPFxAI7jJlxZXwCSez5M3190m+QobIfh+sWDWSHMCWWJN2AWamkegn6vr6YBTw==
+
+yod@^1.0.0-alpha.4:
+  version "1.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/yod/-/yod-1.0.0-alpha.4.tgz#cda357cd8dde8449fedbdf1c39d31ec73b8771d5"
+  integrity sha512-R4yBSsOwmy/DFXMms/YhoIAA9zWmNxpNjN73ceZCWhtOhjXqO/+KwZNCPigCjjJhiVLiwvF5eLdTSmD9eOYlJQ==
+  dependencies:
+    jsonfy "^0.1.0"
+    lodash "^3.7.0"
+    sscan "^0.2.0"
 
 zod-to-json-schema@^3.24.1, zod-to-json-schema@^3.24.5:
   version "3.24.6"
